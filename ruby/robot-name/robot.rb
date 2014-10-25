@@ -1,13 +1,8 @@
 class Robot
-  attr_reader :name
 
-  def initialize
+  def name
     @name ||= make_name
   end
-
-  # def name
-  #   @name ||= make_name
-  # end
 
   def make_name
     name = ''
@@ -26,7 +21,6 @@ class Robot
   end
 
   def reset
-    @name = make_name
-    # @name = nil
+    @name = nil
   end
 end
