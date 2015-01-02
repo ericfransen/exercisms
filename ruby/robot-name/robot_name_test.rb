@@ -24,4 +24,12 @@ class RobotTest < MiniTest::Unit::TestCase
     assert name != name2
     assert_match /^[a-zA-Z]{2}\d{3}$/, name2
   end
+
+  def test_already_had_name
+    skip
+    robot = Robot.new
+    10.times { robot.name; robot.reset }
+    robot.name = name_1
+    p robot.previous_names
+  end
 end
